@@ -3,15 +3,16 @@ import { AdminComponent } from './admin/admin.component';
 import { BoxofficeComponent } from './boxoffice/boxoffice.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './DashBoard/dashboard/dashboard.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+
 
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
-
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'detail/:movieid', component: MovieDetailsComponent },
   { path: 'boxoffice', component: BoxofficeComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'contact', component: ContactComponent },

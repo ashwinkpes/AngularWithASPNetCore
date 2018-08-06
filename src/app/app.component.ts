@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
- 
+  AppTitle: string = 'Bollywood Movies'
   constructor()
   {
     console.log('ctor is called!!!');

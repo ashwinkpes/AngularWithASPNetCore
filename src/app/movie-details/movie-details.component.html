@@ -1,0 +1,22 @@
+<div class="MovieData" *ngIf="MovieData">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 pull-left"> <img src="{{MovieData.imgsrc}}" class="rounded" alt="Cinque Terre"></div>
+      <div class="col-md-4">
+      <div><span class="lbl">Movie Id</span> : <span class="data">{{MovieData.MovieId}}</span> </div> <br/> 
+      <div><span class="lbl">Movie Name</span> : <span class="data">{{MovieData.MovieName}}</span> </div>  <br/>
+      <div><span class="lbl">Release Year</span> : <span class="data">{{MovieData.ReleaseYear}}</span> </div> <br/> 
+      <div><span class="lbl">Verdict</span> : <span class="data">{{MovieData.Verdict}}</span> </div>  <br/>
+      <div><span class="lbl">BoxOffice</span> : <span class="data">{{MovieData.BoxOffice}}</span> </div>  <br/>
+      <div><span class="lbl">Genre</span> : <span class="data">{{MovieData.Genre}}</span> </div>  <br/>
+      <br/>
+      <div><span class="lbl well-lg">Description</span> : <span class="data">{{MovieData.Description}}</span> </div> <br/>
+      <div><button  type="menu" class="btn btn-outline-secondary btn-lg" (click)="goBack()">BACK</button></div> 
+      </div>
+
+     
+</div>
+  </div>  
+
+</div>

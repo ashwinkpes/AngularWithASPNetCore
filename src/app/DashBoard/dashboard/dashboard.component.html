@@ -1,11 +1,12 @@
-<div class="container-fluid">
-    <h1>{{AppTitle}}</h1>
+<div class="container-fluid dashboardbody">   
     <div class="row">     
       <div class="col-md-6">
         <ul>
           <li *ngFor="let movie of Movies">
             <div class="panel panel-default">
-              <div class="panel-heading">Name - {{movie.MovieName}}</div>
+              <div class="panel-heading">Name -  <a routerLink="/detail/{{movie.MovieId}}">
+               {{movie.MovieName}}
+              </a></div>
               <div class="panel-body">
                 <div class="col-md-2 pull-left">
                   <img src="{{movie.imgsrc}}" class="pull-left img-circle" alt="Hungama.jpg" width="80" height="100">
