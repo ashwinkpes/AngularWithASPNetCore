@@ -1,0 +1,48 @@
+
+#demo
+{
+    height: 100%;
+    width: 100%;
+}
+
+.latestmovies
+{
+    margin-top:1%;
+}
+
+.moviestable
+{
+    margin-top: 1%;
+}
+
+.panel-heading
+{
+    font-weight: bold;
+    font-size: small;
+    color: darkslategrey;
+}
+
+.newrow
+{
+    margin-top: 5%;
+}
+
+.itemlabel{
+    font-weight: bold;
+}
+
+.description
+{
+    font-weight: normal;
+    font-size: small;
+}
+
+li{
+    list-style-type: none;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+

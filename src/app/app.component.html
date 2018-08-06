@@ -1,88 +1,18 @@
-<div class="container-fluid">
-    <h1>{{AppTitle}}</h1>
-    <div class="row">     
-      <div class="col-md-6">
-        <ul>
-          <li *ngFor="let movie of Movies">
-            <div class="panel panel-default">
-              <div class="panel-heading">Name - {{movie.MovieName}}</div>
-              <div class="panel-body">
-                <div class="col-md-2 pull-left">
-                  <img src="{{movie.imgsrc}}" class="pull-left img-circle" alt="Hungama.jpg" width="80" height="100">
-                </div>
-                <div class="col-md-10">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div>
-                        <span class="itemlabel">Genre</span>
-                        <span>-{{movie.Genre}}</span>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div>
-                        <span class="itemlabel">Release year</span>
-                        <span>-{{movie.ReleaseYear}}</span>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div>
-                        <span class="itemlabel">Verdict</span>
-                        <span>-{{movie.Verdict}}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row newrow">
-                    <div class="col-md-12">
-                      <div>
-                        <span class="itemlabel">Description</span>
-                        <span class="description">- {{movie.Description}}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-          <div id="demo" class="carousel slide bg-inverse w-50 ml-auto mr-auto" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-              <li data-target="#demo" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="assets/images/JollyLLB.jpg" alt="JollyLLB">
-                <div class="carousel-caption">
-                  <h3>JollyLLB</h3>
-                  <p>We had such a great time in JollyLLB!</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/RowdyRathore.jpg" alt="RowdyRathore">
-                <div class="carousel-caption">
-                  <h3>RowdyRathore</h3>
-                  <p>Thank you, RowdyRathore!</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/images/Hungama.jpg" alt="Hungama">
-                <div class="carousel-caption">
-                  <h3>Hungama</h3>
-                  <p>We love Hungama!</p>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
-          </div>
-        </div>
-    </div>
-  </div>
-  
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard">DashBoard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/boxoffice">Box office</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/admin">Admin</a>
+        </li>
+    </ul>
+  </nav>
+  <br>
+  <router-outlet></router-outlet>

@@ -1,48 +1,15 @@
-
-#demo
+.navbar-nav
 {
-    height: 100%;
-    width: 100%;
+  width:100%;
+  background-color:Green;
 }
 
-.latestmovies
-{
-    margin-top:1%;
+.navbar-nav > li{ 
+border-right: 1px solid white;
+width:200px;
+text-align:center; 
+font-weight:bold;
 }
+.navbar-nav > li a{color:white}
 
-.moviestable
-{
-    margin-top: 1%;
-}
-
-.panel-heading
-{
-    font-weight: bold;
-    font-size: small;
-    color: darkslategrey;
-}
-
-.newrow
-{
-    margin-top: 5%;
-}
-
-.itemlabel{
-    font-weight: bold;
-}
-
-.description
-{
-    font-weight: normal;
-    font-size: small;
-}
-
-li{
-    list-style-type: none;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-}
-
+.navbar-nav > li a:hover{text-decoration:underline}
