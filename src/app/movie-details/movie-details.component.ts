@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '../Services/movie-service';
 import { Location } from '@angular/common';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-movie-details',
@@ -22,9 +23,11 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovie(): void {
     const id = +this.route.snapshot.paramMap.get('movieid');
-    console.log('Id obtained is '+ id)
-    this.movieService.getMovie(id)
-      .subscribe(m => this.MovieData = m);
+    console.log('Id obtained is '+ id)   
+      this.movieService.getMovie(id).pipe(first()).subscribe(m => { 
+        this.MovieData = m; 
+    });
+
   }
 
   goBack(): void {

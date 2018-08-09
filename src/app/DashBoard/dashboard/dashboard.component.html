@@ -9,14 +9,22 @@
               </a></div>
               <div class="panel-body">
                 <div class="col-md-2 pull-left">
-                  <img src="{{movie.imgsrc}}" class="pull-left img-circle" alt="Hungama.jpg" width="80" height="100">
+                  <!-- <img src="{{movie.imgsrc}}" class="pull-left img-circle" alt="Hungama.jpg" width="80" height="100"> -->
                 </div>
                 <div class="col-md-10">
                   <div class="row">
                     <div class="col-md-4">
                       <div>
                         <span class="itemlabel">Genre</span>
-                        <span>-{{movie.Genre}}</span>
+                        <div [ngSwitch]="movie.Genre">
+                          <span *ngSwitchCase="1"> Comedy</span>
+                          <span *ngSwitchCase="2"> Romantic</span>
+                          <span *ngSwitchCase="3">Thriller</span>
+                          <span *ngSwitchCase="4">Mythological</span>
+                          <span *ngSwitchCase="5">Horror</span>
+                          <span *ngSwitchCase="6">Drama</span>
+                          <span *ngSwitchDefault>No Direction</span>
+                        </div>
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -28,7 +36,15 @@
                     <div class="col-md-4">
                       <div>
                         <span class="itemlabel">Verdict</span>
-                        <span>-{{movie.Verdict}}</span>
+                        <div [ngSwitch]="movie.Verdict">
+                          <span *ngSwitchCase="1"> Flop</span>
+                          <span *ngSwitchCase="2"> Loosing</span>
+                          <span *ngSwitchCase="3">Average</span>
+                          <span *ngSwitchCase="4">Hit</span>
+                          <span *ngSwitchCase="5">SuperHit</span>
+                          <span *ngSwitchCase="6">BlockBuster</span>
+                          <span *ngSwitchDefault>No Direction</span>
+                        </div>
                       </div>
                     </div>
                   </div>

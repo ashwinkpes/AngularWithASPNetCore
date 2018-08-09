@@ -1,7 +1,7 @@
 import { MovieService } from './../../Services/movie-service';
 import { Movie } from './../../Models/movie/movie';
 import { Component, OnInit } from '@angular/core';
-
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,8 +18,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     console.log('Init is called!!!');
     this.movieService.GetMovies()
-      .subscribe(movies => this.Movies = movies);
-    console.log(JSON.stringify(this.Movies));
+    .pipe(first()).subscribe(movies => { 
+      this.Movies = movies; 
+      console.log(JSON.stringify(this.Movies));
+  });
+   
   }
 
 }
